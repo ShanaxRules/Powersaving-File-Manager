@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FEE3E3"> <!-- Soft red background -->
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FF6B6B"
+        android:padding="8dp"> <!-- Deep reddish color for the top bar -->
+
+        <Button
+            android:id="@+id/goBack"
+            android:text="←"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/refresh"
+            android:text="⟳"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="Powersave File Manager"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/newFolder"
+            android:text="✚ Folder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+
+    <!-- Path Display -->
+    <TextView
+        android:id="@+id/pathOutput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:background="#FAD4D4"/> <!-- Light pinkish background -->
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF6B6B"/>
+
+    <!-- List View -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#FF6B6B"
+        android:dividerHeight="1dp"
+        android:background="#FFFFFF"/> <!-- White background for contrast -->
+
+    <!-- Bottom Bar for Actions -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FF6B6B"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/b1"
+            android:text="🗑 Delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/rename"
+            android:text="✏ Rename"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/copy"
+            android:text="📋 Copy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/paste"
+            android:visibility="gone"
+            android:text="📥 Paste"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB5B5"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:padding="5dp"/>
+    </LinearLayout>
+</LinearLayout>
